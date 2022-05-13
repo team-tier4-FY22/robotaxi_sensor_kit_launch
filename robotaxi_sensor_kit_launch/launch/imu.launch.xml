@@ -8,7 +8,7 @@
       <push-ros-namespace namespace="tamagawa"/>
       <node pkg="tamagawa_imu_driver" name="tag_serial_driver" exec="tag_serial_driver" if="$(var launch_driver)">
         <remap from="imu/data_raw" to="imu_raw"/>
-        <param name="port" value="/dev/imu"/>
+        <param name="port" value="/dev/ttyUSB0"/>
         <param name="imu_frame_id" value="tamagawa/imu_link"/>
       </node>
     </group>
